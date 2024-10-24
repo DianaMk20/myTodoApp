@@ -1,0 +1,84 @@
+/* Existing CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+  background-color: rgb(146, 146, 206);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  max-width: 400px; /* Limit the input field's width to 400px */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden; /* Hide any overflowing content */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+#addButton {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  margin: 0 auto; /* Center the button horizontally */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 400px;
+  justify-content: center;
+  gap: 10px;
+  text-align: center; /* Center-align the form content */
+}
+
+button.delete {
+  background-color: #f00;
+  font-size: 12px;
+  padding: 2px 5px;
+}
+
+#tasksList {
+  width: 90%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  list-style: none; /* Remove default numbering */
+}
+
+li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  gap: 8px;
+}
+
+li:before {
+  content: attr(data-task-number);
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+}
